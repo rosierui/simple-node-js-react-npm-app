@@ -49,6 +49,8 @@ pwd
 ls -l
 cat .pidfile
 
+ip -a
+
 echo 'Now...'
 echo 'Visit http://localhost:3000 or http://localhost:3500 to see your Node.js/React application in action.'
 echo '(This is why you specified the "args ''-p 3000:3000''" or "args ''-p 3500:3000''" parameter when you'
