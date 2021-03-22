@@ -20,10 +20,13 @@ echo
 echo "=== env ==="
 env
 
+# print every command that executed
+set -x
 pwd
 
 whoami
 
+set +x
 echo 'The following "npm" command runs your Node.js/React application in'
 echo 'development mode and makes the application available for web browsing.'
 echo 'The "npm start" command has a trailing ampersand so that the command runs'
@@ -43,14 +46,14 @@ npm version
 npm start &
 sleep 1
 echo $! > .pidfile
-set +x
 
 pwd
 ls -l
 cat .pidfile
 
-ip -a
+ip a
 
+set +x
 echo 'Now...'
 echo 'Visit http://localhost:3000 or http://localhost:3500 to see your Node.js/React application in action.'
 echo '(This is why you specified the "args ''-p 3000:3000''" or "args ''-p 3500:3000''" parameter when you'
